@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+ }
+body{margin: 0;
+  font-family: Arial;
+  padding:  0px;
+  background-color: aqua; 
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url("img_lights.png") ;
+  background-size: 100%;
+  background-repeat:repeat-y;
+/*background-image: url("img_lights.png");
+*/
+}
+/*
+.head-back{margin-top: 0;
+  height: 170px;
+  background-image: url("chess_back3.jpg") ;
+  background-repeat:unset;
+}
+*/
+.header {
+  padding: 10px;
+  text-align: center; 
+  color: #ddd;
+  background-color: #394449;
+  background-image: url("chess_back.jpg") ;
+  background-repeat:unset;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background:black;
+    overflow:auto; 
+  }
+  
+  li {
+    float:left; 
+    width: 120px;
+  }
+  li a{display:block;
+  text-decoration:none;
+  padding:16px 16px;
+  color:white;
+  text-align: center;
+  }
+  li a.active{background-color:#4CAF50;
+  }
+  li a::selection{background-color: red;}
+  /*li.right{float: right;}*/
+
+  li a:hover:not(.active){background-color:red;
+color: black;
+}
+  li.drop{display:inline-block;}
+  .dropdown {display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown a{
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .drop:hover .dropdown{display:block;}
+  
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn { 
+    float: left;
+    width: 25%;  
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    color:rgb(223, 221, 221);
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+    background: #ddd;
+    margin:auto;
+    background-image: url("footer2.jpg") ;
+    background-size: 33.33%;
+    background-repeat:repeat-x;
+  }
+   #D1{
+     /*color:white;*/
+  text-align:center;
+  position:relative;
+  animation:example1;
+  animation-duration:2s;
+  animation-fill-mode:forwards;
+  }
+.join { 
+  border-radius: 25px;
+  padding: 12px 12px;
+  width: 120px;
+  text-align: center;
+  background-color: red;
+  border: none; 
+}
+.join a{text-decoration: none;
+color: black;}
+
+@keyframes example1{
+0%{top:-50px;opacity:0}
+100%{top: 12px; opacity:1}
+}
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1100px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+  .footer{background-size: 65%;}
+}
+@media screen and (max-width:600px)
+{
+li.right{float:none;}
+li{float:none;
+  width: 100%;
+  text-align: center;
+}
+.footer{background-size: 75%;}
+}
+.fo-con{
+  text-align: left;
+  margin-left: 50px;
+}
+.small-header{  
+  text-align: center;
+  background: white;
+}
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: left;
+}
+
+.responsive {
+  padding: 0 10px;
+  float: left;
+  width: 32.99999%; 
+margin-left:auto;
+}
+.img-galary{
+  background-color: #aaa;
+  width: 100%;
+  height:500px;
+  padding: 20px;
+}
+@media only screen and (max-width: 700px) {
+  .img-galary{height:750px;}  
+  .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+}
+ .head h2{ width: 350px;
+  padding: 10px;
+  background-color: skyblue;
+  border-radius: 25px;
+  text-align: center; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:75px;
+}
+   th, td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+} 
+tr{background: white;}
+th{
+  background-color: #0b942e;
+  color: white;
+}
+tr:hover{background-color: darkgray;}
+td:hover{background-color: teal;}
+.tab table {margin: auto;
+  margin-top: 20px;
+  border: #aaa;
+  border-collapse: collapse;
+  width: 80%;
+} 
+
+
+  
