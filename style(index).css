@@ -4,12 +4,12 @@
 body{margin: 0;
   font-family: Arial;
   padding:  0px;
-  background-color: aqua; 
+  background-color: rgb(84, 165, 135); 
   font-size: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-image: url("img_lights.png") ;
+  background-image: url("chess1.jpg") ;
   background-size: 100%;
-  background-repeat:repeat-y;
+  background-repeat:unset;
 /*background-image: url("img_lights.png");
 */
 }
@@ -89,17 +89,17 @@ color: black;
   
   /* Fake image */
   .fakeimg {
-    background-color: #aaa;
+    background-color: rgb(81, 212, 164);
     width: 100%;
     padding: 20px;
   }
   
   /* Add a card effect for articles */
-  .card {
-    background-color: white;
+  .card { 
     padding: 20px;
     margin-top: 20px;
   }
+  .card h2{color: black;}
   
   /* Clear floats after the columns */
   .row:after {
@@ -123,6 +123,7 @@ color: black;
   }
    #D1{
      /*color:white;*/
+  color: goldenrod;
   text-align:center;
   position:relative;
   animation:example1;
@@ -165,40 +166,57 @@ li{float:none;
   text-align: left;
   margin-left: 50px;
 }
-.small-header{  
-  text-align: center;
-  background: white;
+.small-header{   
+  color: whitesmoke;
+  text-align: center; 
 }
 div.gallery img {
   width: 100%;
   height: auto;
 }
 
-div.desc {
+#d2 .gallery{border: 1px solid aqua;
+ }
+#d2 .responsive{ 
+  padding: 0 10px;
+  float: left;
+  width: 25%;  
+}
+div.desc {  color: #000;
+  font-size: 22px;
+   font-weight: bold;
   padding: 15px;
   text-align: left;
 }
 
-.responsive {
+.responsive { 
   padding: 0 10px;
   float: left;
-  width: 32.99999%; 
-margin-left:auto;
+  width: 32%;  
 }
 .img-galary{
-  background-color: #aaa;
+  background-color: rgb(81, 212, 164);
   width: 100%;
-  height:500px;
+  height:550px;
   padding: 20px;
 }
-@media only screen and (max-width: 700px) {
-  .img-galary{height:750px;}  
-  .responsive {
-      width: 49.99999%;
+.galary img{height: auto;}
+@media only screen and (max-width: 800px) {
+  .img-galary{height:870px;}  
+  .responsive,#d2 .responsive{
+      width: 49% ;
       margin: 6px 0;
     }
 }
- .head h2{ width: 350px;
+@media only screen and (max-width: 500px) {
+  .img-galary{height:1400px;}
+    
+  .responsive,#d2 .responsive {
+      width: 99%;
+      margin: 6px 0;
+    }
+}
+ .head h2,.small-header{ width: 350px;
   padding: 10px;
   background-color: skyblue;
   border-radius: 25px;

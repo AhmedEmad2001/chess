@@ -4,15 +4,15 @@ fieldset{border: 1px solid lightslategrey ;
 padding: 35px;
 }
 input[type=text],input[type=email]
-,input[type=password],input[type=tel]
-{
+,input[type=password],input[type=tel],select
+{outline: none;
 width: 100%;
 padding: 12px;
 border: 1px solid #ccc;
 border-radius: 25px;
 resize: vertical;
 }
-label{
+ label{
     padding: 12px 12px 12px 0;
     display: inline-block;
     font-size: large;
@@ -20,7 +20,7 @@ label{
     border-radius: 15px;
 }
 input[type=submit]
-{
+{margin-top:20px;
 background-color:#4caf50;
 color:white;
 width: 120px;
@@ -29,6 +29,7 @@ padding: 12px 20px;
 float: right;
 border: none; 
 }
+
 input[type=submit]:hover
 {background-color: #45a049;}
 .content {
@@ -54,5 +55,5 @@ margin-top: 6px;
 @media screen and (max-width:600px) {
     .col-25,.col-75,input[type=submit]
     {width: 100%;
-    margin-top: 0;}
+    margin-top: 20px;}
 }

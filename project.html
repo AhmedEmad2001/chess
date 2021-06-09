@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
  <link rel="stylesheet" href="style.css">
 
  <link rel="stylesheet" href="style(index).css">
@@ -25,6 +28,7 @@
 
     <div class="top">
         <div class="header">
+            <img src="logo.png" style="float: left; width: 100px;">
             <h1>Chess Website</h1>
              </div>
     <!--<a href="project.html">Registration Form</a>-->
@@ -50,7 +54,7 @@
     <div class="content">
 <fieldset >
     <legend>Registration form</legend>
-        <form  >
+        <form id="form" onsubmit="return validate()" action="index.html">
         <div class="row">
         <div class="col-25">
         <label for="fname">First Name</label>
@@ -73,7 +77,7 @@
                 <label for="mail">e-mail</label>
                 </div>
                 <div class="col-75">
-                    <input type="email" name="mail" placeholder="Your e-mail...">
+                    <input type="email" name="mail" placeholder="Your e-mail..." >
                 </div>
                 </div>
                 
@@ -82,7 +86,7 @@
                 <label for="pass">password</label>
                 </div>
                 <div class="col-75">
-                    <input type="password" name="pass" placeholder="Your password..." pattern="[A-Z]{1}[A-Za-z-#-*-_-]{8}[0-9]{6}">
+                    <input type="password" name="pass" placeholder="Your password..." >
                 </div>
                 </div>
 
@@ -91,7 +95,7 @@
                     <label for="mobile">mobile number</label>
                     </div>
                     <div class="col-75">
-                        <input type="tel" name="mobile" placeholder="01123456789" pattern="[0-5]{3}[0-9]{3}[0-9]{3}[0-9]{2}">
+                        <input type="tel" name="mobile" placeholder="01123456789"  pattern="[0]{1}[1]{1}[0-9]{9}">
                     </div>
                     </div>
 
@@ -109,10 +113,15 @@
                             <label for="gender">gender</label>
                             </div>
                             <div class="col-75">
-                                <input type="radio" name="gender" >
+                                <select>
+                                    <option value="male"> male </option>
+                                    <option value="female"> female </option>
+                                </select> 
+                        <!--    <input type="radio" name="gender" >
                                 <label for="gender">male</label>
                                 <input type="radio" name="gender" >
                                 <label for="gender">female</label>
+                        -->
                             </div>
                             </div>
 
@@ -131,6 +140,39 @@
       <p><strong>linkedin</strong>: Ahmed Emad Elsherbini </p>
     </div>
     </div>
+<script>
+    function validate()
+ {
+     let x=document.forms['form']['pass'].value;
+     //let pat=/^(?=.*[A-Z]{1})(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{3}$/;
+
+     let pat=/^([A-Z]{1})([A-Za-z]{8}[#*&-_]{1}\d+)/;
+     if(pat.test(x))
+     {
+         alert("Submit Succsefully")
+        return true;
+     }
+     else
+     {
+         alert(
+             "The enter password not valid\n\n valid password must:\n start with uppercase character.\n include 8 characters.\n include one digit at least.\n include one special character like -, _, #, &, and *");
+         return false;
+     }
+ } 
+ /*function number()
+{
+   let x=document.forms['form']['mobile'].value;
+   let pat=/^0[0-9]{10}/;
+   if(pat.test(x))
+   {alert("valid");
+    return true;
+}
+   else
+   {alert("not");
+    return false;
+}
+} */
+</script>
 
 </body>
 </html>
