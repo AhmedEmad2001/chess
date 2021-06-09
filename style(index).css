@@ -174,8 +174,16 @@ div.gallery img {
   width: 100%;
   height: auto;
 }
+#d2 .desc ,.card h2{width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color:tomato;
+border-radius: 25px;
+}
 
-#d2 .gallery{border: 1px solid aqua;
+#d2 .gallery:hover{
+  border: 1px solid aqua;
  }
 #d2 .responsive{ 
   padding: 0 10px;
