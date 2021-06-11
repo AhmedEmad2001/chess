@@ -160,6 +160,7 @@ li{float:none;
   width: 100%;
   text-align: center;
 }
+ul{width: 100%;}
 .footer{background-size: 75%;}
 }
 .fo-con{
@@ -185,13 +186,14 @@ border-radius: 25px;
 #d2 .gallery:hover{
   border: 1px solid aqua;
  }
+ .gallery a{text-decoration: none;}
 #d2 .responsive{ 
   padding: 0 10px;
   float: left;
   width: 25%;  
 }
 div.desc {  color: #000;
-  font-size: 22px;
+  font-size: 20px;
    font-weight: bold;
   padding: 15px;
   text-align: left;
